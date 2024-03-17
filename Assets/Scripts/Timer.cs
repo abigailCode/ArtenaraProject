@@ -4,7 +4,7 @@ using TMPro;
 
 public class Timer : MonoBehaviour {
     private float startTime;
-    private float remainingTime = 60f; // Set initial time to 60 seconds (1 minute)
+    private float remainingTime = 160f; // Set initial time to 60 seconds (1 minute)
     private bool timerRunning = true;
 
     void Start() {
@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour {
             string minutes = ((int)remainingTime / 60).ToString("00");
             string seconds = (remainingTime % 60).ToString("00");
 
-            GameObject.Find("Timer").GetComponent<TMP_Text>().text = minutes + ":" + seconds;
+            GetComponent<TMP_Text>().text = minutes + ":" + seconds;
         }
     }
 
