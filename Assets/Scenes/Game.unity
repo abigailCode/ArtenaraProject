@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: collectSound
       value: 
       objectReference: {fileID: 8300000, guid: 79f7bb86abce1304c88c5bdc73cd9b67, type: 3}
+    - target: {fileID: 9185414076367472550, guid: b274f055acd44484e979267107f9a3c4, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 79f7bb86abce1304c88c5bdc73cd9b67, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -377,6 +381,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9172043829906521309, guid: 46398a79a336cba4c9c8998b2bff56c2, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ff2ec002b728e2428225738cb507ab6, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -500,6 +508,10 @@ PrefabInstance:
       propertyPath: collectSound
       value: 
       objectReference: {fileID: 8300000, guid: 79f7bb86abce1304c88c5bdc73cd9b67, type: 3}
+    - target: {fileID: 9185414076367472550, guid: b274f055acd44484e979267107f9a3c4, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 79f7bb86abce1304c88c5bdc73cd9b67, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -571,6 +583,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4523049093321155921, guid: 8280ad2f586477b47ac0d3d3e444e3aa, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f3e79cc7522ec184098f57276bb97ef9, type: 3}
+    - target: {fileID: 8327255962956053842, guid: 8280ad2f586477b47ac0d3d3e444e3aa, type: 3}
       propertyPath: collectSound
       value: 
       objectReference: {fileID: 8300000, guid: f3e79cc7522ec184098f57276bb97ef9, type: 3}
@@ -731,6 +747,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8429698070798368479, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 27c7cf179d55e43418f3a5af01208bcb, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -802,6 +822,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4523049093321155921, guid: 8280ad2f586477b47ac0d3d3e444e3aa, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f3e79cc7522ec184098f57276bb97ef9, type: 3}
+    - target: {fileID: 8327255962956053842, guid: 8280ad2f586477b47ac0d3d3e444e3aa, type: 3}
       propertyPath: collectSound
       value: 
       objectReference: {fileID: 8300000, guid: f3e79cc7522ec184098f57276bb97ef9, type: 3}
@@ -1225,6 +1249,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9172043829906521309, guid: 46398a79a336cba4c9c8998b2bff56c2, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ff2ec002b728e2428225738cb507ab6, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2043,6 +2071,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8429698070798368479, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 27c7cf179d55e43418f3a5af01208bcb, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

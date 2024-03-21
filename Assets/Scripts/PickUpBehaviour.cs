@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PickUpBehaviour : MonoBehaviour
 {
+    public AudioClip collectSound;
+
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("MIUAUUUUU with " + other.gameObject.name);
         if (other.gameObject.name == "Player")
         {
-            GameManager.instance.SetCount();
+            if (SceneController.instance.currentScene != "Victory") GameManager.instance.SetCount();
+            AudioSource.PlayClipAtPoint(collectSound, transform.position);
             Destroy(gameObject);
         }
 

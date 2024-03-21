@@ -40,8 +40,9 @@ public class SimpleCollectibleScript : MonoBehaviour
         //if(collectEffect)
         //	Instantiate(collectEffect, transform.position, Quaternion.identity);
 
-        GameManager.instance.SetCount();
+        print("aaaa");
         Destroy(gameObject);
+        if (SceneController.instance.currentScene != "Victory") GameManager.instance.SetCount();
 
     }
 }

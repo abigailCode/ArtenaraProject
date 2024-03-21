@@ -13,6 +13,11 @@ public class Menu : MonoBehaviour
         Cursor.visible = true;
     }
 
+    public void Test()
+    {
+        SceneController.instance.LoadScene("Victory");
+    }
+
     public void StartGame()
     {
         GameManager.instance.ResetState();
