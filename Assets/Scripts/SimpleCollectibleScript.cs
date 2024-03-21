@@ -35,8 +35,8 @@ public class SimpleCollectibleScript : MonoBehaviour
 
     public void Collect()
     {
-        //if (collectSound)
-        //    AudioSource.PlayClipAtPoint(collectSound, transform.position);
+        if (collectSound)
+            AudioSource.PlayClipAtPoint(collectSound, transform.position);
         //if(collectEffect)
         //	Instantiate(collectEffect, transform.position, Quaternion.identity);
 

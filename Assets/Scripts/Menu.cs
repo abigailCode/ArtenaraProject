@@ -6,7 +6,7 @@ using UnityEngine;
 public class Menu : MonoBehaviour
 {
     public GameObject CreditsPanel;
-
+        
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
