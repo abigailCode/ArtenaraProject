@@ -3,13 +3,8 @@ using UnityEngine.UI;
 using TMPro;
 
 public class Timer : MonoBehaviour {
-    private float startTime;
-    private float remainingTime = 160f; // Set initial time to 60 seconds (1 minute)
+    private float remainingTime = 160f;
     private bool timerRunning = true;
-
-    void Start() {
-        startTime = Time.time;
-    }
 
     void Update() {
         if (timerRunning) {
