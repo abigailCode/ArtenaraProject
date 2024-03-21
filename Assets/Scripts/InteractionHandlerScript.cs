@@ -29,6 +29,7 @@ public class InteractionHandlerScript : MonoBehaviour,
 
         if (eventData.MixedRealityInputAction.Description == "Select")
         {
+            Debug.Log("Select action started on " + gameObject.name);
             gameObject.GetComponent<SimpleCollectibleScript>().Collect();
         }
     }

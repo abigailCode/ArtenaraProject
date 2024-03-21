@@ -3,87 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-public class SimpleCollectibleScript : MonoBehaviour {
+public class SimpleCollectibleScript : MonoBehaviour
+{
 
-	public enum CollectibleTypes {NoType, Type1, Type2, Type3, Type4, Type5}; // you can replace this with your own labels for the types of collectibles in your game!
+    public bool rotate; // do you want it to rotate?
 
-	public CollectibleTypes CollectibleType; // this gameObject's type
+    public float rotationSpeed;
 
-	public bool rotate; // do you want it to rotate?
+    public AudioClip collectSound;
 
-	public float rotationSpeed;
+    public GameObject collectEffect;
 
-	public AudioClip collectSound;
+    
 
-	public GameObject collectEffect;
+    // Update is called once per frame
+    void Update()
+    {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        if (rotate)
+            transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
 
-		if (rotate)
-			transform.Rotate (Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
+    }
 
-	}
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.tag == "Player")
+    //    {
+    //        Collect();
+    //    }
+   // }
 
-	void OnTriggerEnter(Collider other)
-	{
-		if (other.tag == "Player") {
-			Collect ();
-		}
-	}
+    public void Collect()
+    {
+        //if (collectSound)
+        //    AudioSource.PlayClipAtPoint(collectSound, transform.position);
+        //if(collectEffect)
+        //	Instantiate(collectEffect, transform.position, Quaternion.identity);
 
-	public void Collect()
-	{
-		if(collectSound)
-			AudioSource.PlayClipAtPoint(collectSound, transform.position);
-		//if(collectEffect)
-		//	Instantiate(collectEffect, transform.position, Quaternion.identity);
+        GameManager.instance.SetCount();
+        Destroy(gameObject);
 
-		//Below is space to add in your code for what happens based on the collectible type
-
-		if (CollectibleType == CollectibleTypes.NoType) {
-
-			//Add in code here;
-
-			Debug.Log ("Do NoType Command");
-		}
-		if (CollectibleType == CollectibleTypes.Type1) {
-
-			//Add in code here;
-
-			Debug.Log ("Do NoType Command");
-		}
-		if (CollectibleType == CollectibleTypes.Type2) {
-
-			//Add in code here;
-
-			Debug.Log ("Do NoType Command");
-		}
-		if (CollectibleType == CollectibleTypes.Type3) {
-
-			//Add in code here;
-
-			Debug.Log ("Do NoType Command");
-		}
-		if (CollectibleType == CollectibleTypes.Type4) {
-
-			//Add in code here;
-
-			Debug.Log ("Do NoType Command");
-		}
-		if (CollectibleType == CollectibleTypes.Type5) {
-
-			//Add in code here;
-
-			Debug.Log ("Do NoType Command");
-		}
-
-		//Destroy (gameObject);
-        rotationSpeed = rotationSpeed * 2;
     }
 }

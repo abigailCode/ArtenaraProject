@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour {
             string minutes = ((int)remainingTime / 60).ToString("00");
             string seconds = (remainingTime % 60).ToString("00");
 
-            GetComponent<TMP_Text>().text = minutes + ":" + seconds;
+            //GetComponent<TMP_Text>().text = minutes + ":" + seconds;
         }
     }
 
