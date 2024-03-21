@@ -6,7 +6,7 @@ using UnityEngine;
 public class Menu : MonoBehaviour
 {
     public GameObject CreditsPanel;
-        
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -33,5 +33,10 @@ public class Menu : MonoBehaviour
     public void HideCredits()
     {
         CreditsPanel.SetActive(false);
+    }
+
+    public void GoToMenu()
+    {
+        SceneController.instance.LoadScene("Menu");
     }
 }

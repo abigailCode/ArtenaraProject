@@ -21,10 +21,14 @@ public class Timer : MonoBehaviour {
                 SceneController.instance.LoadScene("GameOver");
             }
 
-            string minutes = ((int)remainingTime / 60).ToString("00");
-            string seconds = (remainingTime % 60).ToString("00");
+            string minutes = (Mathf.Floor(Mathf.Round(remainingTime) / 60)).ToString();
+            string seconds = (Mathf.Round(remainingTime) % 60).ToString();
 
-            //GetComponent<TMP_Text>().text = minutes + ":" + seconds;
+            if (minutes.Length == 1) { minutes = "0" + minutes; }
+            if (seconds.Length == 1) { seconds = "0" + seconds; }
+
+
+            GameObject.Find("Timer").GetComponent<TMP_Text>().text = minutes + ":" + seconds;
         }
     }
 

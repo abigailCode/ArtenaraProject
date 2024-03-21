@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour
     IEnumerator PlaySound(GameObject door)
     {
         yield return new WaitForSeconds(1);
+
+        door.GetComponent<AudioSource>().mute = false;
         door.GetComponent<AudioSource>().Play();
     }
 }

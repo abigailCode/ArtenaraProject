@@ -7,6 +7,7 @@ public class DoorController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.name != "Player") return;
         if (GameManager.instance.phase == 0)
         {
             GameManager.instance.Finish(12);
