@@ -7,11 +7,12 @@ public class Menu : MonoBehaviour
 {
     public GameObject CreditsPanel;
 
-    public void Start()
+    void Start()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+
     public void StartGame()
     {
         GameManager.instance.ResetState();

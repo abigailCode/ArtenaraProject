@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     private int pickupsCount = 0; 
     public static GameManager instance;
-    public int goal=4;
+    public int goal = 8;
     public int phase = 0;
 
     void Start()
