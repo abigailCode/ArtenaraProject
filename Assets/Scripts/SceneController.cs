@@ -32,4 +32,9 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public string currentScene
+    {
+        get { return SceneManager.GetActiveScene().name; }
+    }
 }

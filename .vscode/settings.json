@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "DemoMRKT_AbigailOjedaAlonso.sln"
+    "dotnet.defaultSolution": "ArtenaraProject.sln"
 }

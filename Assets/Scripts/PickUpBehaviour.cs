@@ -4,23 +4,14 @@ using UnityEngine;
 
 public class PickUpBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public AudioClip collectSound;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Player")
         {
-            GameManager.instance.SetCount();
+            if (SceneController.instance.currentScene != "Victory") GameManager.instance.SetCount();
+            AudioSource.PlayClipAtPoint(collectSound, transform.position);
             Destroy(gameObject);
         }
 

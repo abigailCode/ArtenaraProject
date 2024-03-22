@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     private int pickupsCount = 0; 
     public static GameManager instance;
-    public int goal=4;
+    public int goal = 8;
     public int phase = 0;
 
     void Start()
@@ -23,8 +23,9 @@ public class GameManager : MonoBehaviour
     {
         pickupsCount++;
         ChangeScoreText();
-        if (pickupsCount == goal) GameObject.Find("Exit").transform.GetChild(0).gameObject.SetActive(true);
-
+        if (pickupsCount == goal) {
+            StartCoroutine(GameObject.Find("Player").GetComponent<SpawnDoor>().SpawnObjectInFront());
+        }
     } 
 
     public int GetCount() {  return pickupsCount; }
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         pickupsCount = 0;
         phase = 0;
-        goal = 4;
+        goal = 8;
     }
 
     public void ChangeScoreText()
