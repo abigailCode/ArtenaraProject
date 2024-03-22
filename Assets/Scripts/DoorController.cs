@@ -1,20 +1,32 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorController : MonoBehaviour
-{
+public class DoorController : MonoBehaviour {
 
-    private void OnTriggerEnter(Collider other)
-    {
+    void Start() {
+        StartCoroutine(PlaySound());
+    }
+
+    IEnumerator PlaySound() {
+        yield return new WaitForSeconds(1);
+
+        GetComponent<AudioSource>().mute = false;
+        GetComponent<AudioSource>().Play();
+    }
+
+    void OnTriggerEnter(Collider other) {
         if (other.gameObject.name != "Player") return;
-        if (GameManager.instance.phase == 0)
-        {
-            GameManager.instance.Finish(12);
+        ChangeScene();
+    }
+
+    public void ChangeScene() {
+        if (GameManager.instance.phase == 0) {
             SceneController.instance.LoadScene("Game2");
-        }else
-        {
+            GameManager.instance.Finish(12);
+        }
+        else {
             SceneController.instance.LoadScene("Victory");
         }
+        Destroy(gameObject);
     }
 }

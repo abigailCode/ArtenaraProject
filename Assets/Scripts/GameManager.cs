@@ -23,13 +23,9 @@ public class GameManager : MonoBehaviour
     {
         pickupsCount++;
         ChangeScoreText();
-        if (pickupsCount == goal)
-        {
-            GameObject door = GameObject.Find("Exit").transform.GetChild(0).gameObject;
-            door.SetActive(true);
-            StartCoroutine(PlaySound(door));
+        if (pickupsCount == goal) {
+            StartCoroutine(GameObject.Find("Player").GetComponent<SpawnDoor>().SpawnObjectInFront());
         }
-
     } 
 
     public int GetCount() {  return pickupsCount; }
@@ -51,13 +47,5 @@ public class GameManager : MonoBehaviour
     public void ChangeScoreText()
     {
         GameObject.Find("Counter").GetComponent<TMP_Text>().text = $"{pickupsCount}/{goal}";
-    }
-
-    IEnumerator PlaySound(GameObject door)
-    {
-        yield return new WaitForSeconds(1);
-
-        door.GetComponent<AudioSource>().mute = false;
-        door.GetComponent<AudioSource>().Play();
     }
 }
