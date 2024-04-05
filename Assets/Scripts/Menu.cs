@@ -6,9 +6,12 @@ using UnityEngine;
 public class Menu : MonoBehaviour
 {
     public GameObject CreditsPanel;
+    public GameObject SettingsPanel;
 
     void Start()
     {
+        AudioManager.instance.PlayMusic("menu");
+
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -38,6 +41,15 @@ public class Menu : MonoBehaviour
     public void HideCredits()
     {
         CreditsPanel.SetActive(false);
+    }
+      public void ShowSettings()
+    {
+        SettingsPanel.SetActive(true);
+    }
+
+    public void HideSettings()
+    {
+        SettingsPanel.SetActive(false);
     }
 
     public void GoToMenu()
