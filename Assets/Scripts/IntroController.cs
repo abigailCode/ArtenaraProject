@@ -5,6 +5,7 @@ public class IntroController : MonoBehaviour {
     int index = 0;
 
     void Start() {
+        AudioManager.instance.PlayMusic("intro");
         texts[index].SetActive(true);
     }
 
@@ -18,5 +19,10 @@ public class IntroController : MonoBehaviour {
         texts[index].SetActive(false);
         if (index == 0) index = 2;
         texts[--index].SetActive(true);
+    }
+
+    public void GoToMenu()
+    {
+        SceneController.instance.LoadScene("Menu");
     }
 }
