@@ -23,15 +23,15 @@ MonoBehaviour:
       id: 1
       description: Select
       axisConstraint: 2
-  - localizationKey: en
-    keyword: Show
+  - localizationKey: es
+    keyword: Kitty
     keyCode: 0
     action:
       id: 0
       description: Select
       axisConstraint: 2
-  - localizationKey: en
-    keyword: Hide
+  - localizationKey: es
+    keyword: Go
     keyCode: 0
     action:
       id: 0
@@ -45,14 +45,14 @@ MonoBehaviour:
       description: Select
       axisConstraint: 2
   - localizationKey: es
-    keyword: Mostrar
+    keyword: Gato
     keyCode: 0
     action:
       id: 0
       description: Select
       axisConstraint: 2
   - localizationKey: es
-    keyword: Ocultar
+    keyword: Vete
     keyCode: 0
     action:
       id: 0
