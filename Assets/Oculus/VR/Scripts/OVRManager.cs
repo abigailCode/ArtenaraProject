@@ -1991,7 +1991,7 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
         string logString = System.Runtime.InteropServices.Marshal.PtrToStringAnsi(message, size);
         if (logLevel <= OVRPlugin.LogLevel.Info)
         {
-            UnityEngine.Debug.Log("[OVRPlugin] " + logString);
+            //UnityEngine.Debug.Log("[OVRPlugin] " + logString);
         }
         else
         {
@@ -2474,7 +2474,7 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
         {
             try
             {
-                Debug.Log("[OVRManager] HMDLost event");
+                //Debug.Log("[OVRManager] HMDLost event");
                 if (HMDLost != null)
                     HMDLost();
             }
@@ -2636,7 +2636,7 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
         {
             try
             {
-                Debug.Log("[OVRManager] AudioInChanged event");
+                //Debug.Log("[OVRManager] AudioInChanged event");
                 if (AudioInChanged != null)
                     AudioInChanged();
             }
@@ -2654,7 +2654,7 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
         {
             try
             {
-                Debug.Log("[OVRManager] TrackingLost event");
+                //Debug.Log("[OVRManager] TrackingLost event");
                 if (TrackingLost != null)
                     TrackingLost();
             }
@@ -2668,7 +2668,7 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
         {
             try
             {
-                Debug.Log("[OVRManager] TrackingAcquired event");
+                //Debug.Log("[OVRManager] TrackingAcquired event");
                 if (TrackingAcquired != null)
                     TrackingAcquired();
             }
@@ -3001,7 +3001,7 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 
     private void OnApplicationQuit()
     {
-        Debug.Log("[OVRManager] OnApplicationQuit");
+        //Debug.Log("[OVRManager] OnApplicationQuit");
     }
 
     #endregion // Unity Messages

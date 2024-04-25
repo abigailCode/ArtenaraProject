@@ -20,9 +20,9 @@ MonoBehaviour:
     isPrivate: 1
     createdAt: 2024-04-16T09:24:19-0700
     trainingStatus: 1
-    lastTrainDuration: 56
-    lastTrainedAt: 2024-04-16T10:58:58-0700
-    nextTrainAt: 2024-04-16T10:58:02-0700
+    lastTrainDuration: 61
+    lastTrainedAt: 2024-04-19T09:36:59-0700
+    nextTrainAt: 2024-04-19T09:35:58-0700
     intents:
     - id: 831191229035827
       name: hide_interface
@@ -31,6 +31,11 @@ MonoBehaviour:
         id: 1148726279887700
       - name: object:object
         id: 279811335180807
+    - id: 1408764343337244
+      name: hide_penguin
+      entities:
+      - name: activate:activate
+        id: 1148726279887700
     - id: 398792656409681
       name: hide_window
       entities:
@@ -45,6 +50,11 @@ MonoBehaviour:
         id: 1148726279887700
       - name: object:object
         id: 279811335180807
+    - id: 411622254941314
+      name: show_penguin
+      entities:
+      - name: activate:activate
+        id: 1148726279887700
     - id: 1160302882052482
       name: show_window
       entities:
@@ -62,10 +72,23 @@ MonoBehaviour:
       - name: activate
         id: 1148726279887700
       keywords:
+      - keyword: GO
+        synonyms:
+        - GO
+      - keyword: PENGUIN
+        synonyms:
+        - penguin
+      - keyword: "PING\xDCINO"
+        synonyms:
+        - "ping\xDCino"
+      - keyword: VETE
+        synonyms:
+        - vete
       - keyword: false
         synonyms:
         - esconde
         - esconder
+        - go
         - oculta
         - quita
       - keyword: true
@@ -73,6 +96,7 @@ MonoBehaviour:
         - haz visible
         - mostrar
         - muestra
+        - penguin
         - pon
     - name: object
       id: 746257094389309

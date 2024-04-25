@@ -67,6 +67,11 @@ namespace Microsoft.MixedReality.Toolkit.Examples
         [SerializeField]
         private MixedRealityInputAction tapAction = MixedRealityInputAction.None;
 
+        [SerializeField] GameObject prefab;
+        [SerializeField] MixedRealityInputAction actionToInstantiate = MixedRealityInputAction.None;
+        GameObject instancedPrefabCopy;
+        Vector3 initialPrefabCopyPosition;
+
         private void OnEnable()
         {
             HideRails();
@@ -74,6 +79,10 @@ namespace Microsoft.MixedReality.Toolkit.Examples
 
         public void OnGestureStarted(InputEventData eventData)
         {
+            instancedPrefabCopy = Instantiate(prefab);
+            Vector3 newPosition = Camera.main.transform.position + Camera.main.transform.forward * 2.0f;
+            instancedPrefabCopy.transform.position = newPosition;
+            initialPrefabCopyPosition = newPosition;
             Debug.Log($"OnGestureStarted [{Time.frameCount}]: {eventData.MixedRealityInputAction.Description}");
 
             MixedRealityInputAction action = eventData.MixedRealityInputAction;

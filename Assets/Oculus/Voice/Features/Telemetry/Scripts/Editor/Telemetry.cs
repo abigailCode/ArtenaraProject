@@ -228,7 +228,7 @@ namespace Meta.Voice.TelemetryUtilities
                 return;
             }
 
-            Debug.LogWarning(content);
+            //Debug.LogWarning(content);
         }
 
         private static void LogVerbose(object content)
