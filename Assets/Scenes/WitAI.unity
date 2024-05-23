@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1249956, g: 0.09850815, b: 0.16570689, a: 1}
+  m_IndirectSpecularColor: {r: 0.08967438, g: 0.07284487, b: 0.14551346, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,86 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &111207345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 111207346}
+  - component: {fileID: 111207347}
+  m_Layer: 0
+  m_Name: Response Handler_ShowLogo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &111207346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111207345}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1574240305}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &111207347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111207345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591c3d6f017c11b4faa41506d75635b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Voice: {fileID: 1574240304}
+  ValidateEarly: 0
+  intent: show_logo
+  confidenceThreshold: 0.6
+  valueMatchers:
+  - path: entities.activate:activate[0].value
+    witValueReference: {fileID: 0}
+    contentRequired: 1
+    matchMethod: 0
+    comparisonMethod: 0
+    matchValue: 
+    floatingPointComparisonTolerance: 0.00009999999747378752
+    allowConfidenceOverlap: 0
+    confidenceRanges: []
+  formattedValueEvents: []
+  onMultiValueEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1574240306}
+        m_TargetAssemblyTypeName: HandleVoiceCommandWitAI, Assembly-CSharp
+        m_MethodName: HandleCommand
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDidNotMatch:
+    m_PersistentCalls:
+      m_Calls: []
+  onOutOfDomain:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &384845041
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,7 +263,7 @@ GameObject:
   - component: {fileID: 488181553}
   - component: {fileID: 488181554}
   m_Layer: 0
-  m_Name: Response Handler_HidePenguin
+  m_Name: Response Handler_HideRoomba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Voice: {fileID: 1574240304}
   ValidateEarly: 0
-  intent: hide_penguin
+  intent: hide_roomba
   confidenceThreshold: 0.6
   valueMatchers:
   - path: entities.activate:activate[0].value
@@ -234,10 +314,10 @@ MonoBehaviour:
   onMultiValueEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1574240302}
-        m_TargetAssemblyTypeName: HandleVoiceCommand, Assembly-CSharp
-        m_MethodName: HidePenguin
-        m_Mode: 1
+      - m_Target: {fileID: 1574240306}
+        m_TargetAssemblyTypeName: HandleVoiceCommandWitAI, Assembly-CSharp
+        m_MethodName: HandleCommand
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -564,6 +644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: box3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ae15645a7aac0a499224299ca4127d3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -815,7 +899,7 @@ GameObject:
   - component: {fileID: 1333205879}
   - component: {fileID: 1333205880}
   m_Layer: 0
-  m_Name: Response Handler_ShowPenguin
+  m_Name: Response Handler_ShowRoomba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -850,7 +934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Voice: {fileID: 1574240304}
   ValidateEarly: 0
-  intent: show_penguin
+  intent: show_roomba
   confidenceThreshold: 0.6
   valueMatchers:
   - path: entities.activate:activate[0].value
@@ -866,10 +950,10 @@ MonoBehaviour:
   onMultiValueEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1574240302}
-        m_TargetAssemblyTypeName: HandleVoiceCommand, Assembly-CSharp
-        m_MethodName: ShowPenguin
-        m_Mode: 1
+      - m_Target: {fileID: 1574240306}
+        m_TargetAssemblyTypeName: HandleVoiceCommandWitAI, Assembly-CSharp
+        m_MethodName: HandleCommand
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -895,7 +979,7 @@ GameObject:
   - component: {fileID: 1574240305}
   - component: {fileID: 1574240304}
   - component: {fileID: 1574240303}
-  - component: {fileID: 1574240302}
+  - component: {fileID: 1574240306}
   m_Layer: 0
   m_Name: App Voice Experience
   m_TagString: Untagged
@@ -903,20 +987,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1574240302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574240301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f7e070734674394b84562353de00a03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windowObject: {fileID: 0}
-  interfaceObject: {fileID: 0}
 --- !u!114 &1574240303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1047,10 +1117,25 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 111207346}
   - {fileID: 1333205879}
   - {fileID: 488181553}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1574240306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574240301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53111b2bef095994e9b83dc6c0206c00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logoObject: {fileID: 2014948325}
+  roombaObject: {fileID: 820558691}
 --- !u!1001 &2014948323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1107,6 +1192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: logo
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7954bee532944b49a3392f65be02d2d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7280415688546089554, guid: b7954bee532944b49a3392f65be02d2d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1119,6 +1208,11 @@ PrefabInstance:
 --- !u!4 &2014948324 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b7954bee532944b49a3392f65be02d2d, type: 3}
+  m_PrefabInstance: {fileID: 2014948323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2014948325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b7954bee532944b49a3392f65be02d2d, type: 3}
   m_PrefabInstance: {fileID: 2014948323}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2019930462
